@@ -1,9 +1,9 @@
 /* Style Settings */
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 :root {
-    --bgColor: #F4EED4;
-    --accentColor: #E03A3E;
-    --hoverColor: #963D96;
+    --bgColor: #FFFFFF;
+    --accentColor: #000000;
+    --hoverColor: #29e32c;
     --font: 'Karla', sans-serif;
 }
 
