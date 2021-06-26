@@ -1,63 +1,53 @@
 /* Style Settings */
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');*/
 :root {
-    --bgColor: #FFFFFF;
-    --accentColor: #000000;
-    --hoverColor: #963D96;
-    --borderColor:#000000;
-    --font: 'Karla', sans-serif;
+    --bgColor: white;
+    --accentColor: white  /*#9bff00/*#30cf8c*/;
+    --accentColor2: black;
+    --accentColor3:#54E47A;
+    --font: "Times New Roman", Times, serif;
 }
 
 body{
     background-color: var(--bgColor);
+
 }
 
 #userPhoto{
-    width: 96px;
-    height: 96px;
-    display: block;
-    margin: 35px auto 20px;
-    border-radius: 50%;
-    border: solid var(--bgColor) 2px;
-}
-#rainbow {
-    transform: skewY(-15deg);
-    position: absolute;
-    width: 100%;
-    top: 31%;
-    z-index: -1;
-    box-shadow:
-    0 0 0 35px #E03A3E,
-    0 0 0 65px #FCB827,
-    0 0 0 95px #62BB47,
-    0 0 0 125px #F5831D,
-    0 0 0 155px #009DDC,
-    0 0 0 185px #963D96
+    width:  156px;
+    height: 156px;/*96*/
+    margin: 5px auto 5px;
+    /*border-radius: 50%;*/
+    border: 3px;
+    /*border-radius: 100%;*/
+    border-style: solid;
+    border-color: var(--bgColor);
+    
 }
 
 #userName{
-    color: var(--bgColor);
-    font-size: 1.2rem;
-    font-weight: 700;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
     line-height: 1.25;
     display: block;
     font-family: var(--font);
     width: 100%;
     text-align: center;
     text-decoration: none;
-    text-shadow: 0 0 3px #FF0000, 0 0 5px #009DDC;
 }
 
 #links{
     max-width: 675px;
     width: auto;
     display: block;
-    margin: 27px auto;
+    margin: 5px auto;
 }
+
 .link{
     display: block;
-    background-color: var(--bgColor);
-    color: var(--accentColor);
+    background-color: var(--accentColor);
+    color: black;
     font-family: var(--font);
     text-align: center;
     margin-bottom: 20px;
@@ -65,13 +55,15 @@ body{
     text-decoration: none;
     font-size: 1rem;
     transition: all .25s cubic-bezier(.08,.59,.29,.99);
-    border: solid var(--borderColor) 3px;
+    border: solid var(--accentColor2) 2px;
+         
 }
 
 .link:hover{
-    background-color: var(--hoverColor);
-    color: var(--bgColor);
+    background-color: var(--accentColor3);
+    color: var(black);
 }
+
 
 .iframe-container {
   overflow: hidden;
@@ -87,4 +79,122 @@ body{
    position: absolute;
    top: 0;
    width: 100%;
+}
+
+.unstyled-button {
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.iconic {
+   display: inline-block;
+   position: relative;
+   z-index: 1;
+   padding: 0 0em 0 0em ;
+
+}
+
+
+
+/*@media not screen and (min-width: 899px){
+  
+  .iconic {
+    margin: 0 -2em;
+  }
+}
+@media (min-width: 30em) and (orientation: landscape){
+  .iconic {
+      margin: 0 2em;
+    }
+  
+     
+  }
+*/
+/*https://stackoverflow.com/questions/11078509/how-to-increase-the-clickable-area-of-a-a-tag-button#:~:text=That%20said%2C%20if%20you%20really,a%20).&text=z%2Dindex%20can%20be%20used,of%20any%20text%20that%20follows.*/
+
+
+
+/*Petition Button stuff*/
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: white;
+  background: #f02c24;
+background: #f02c24/*linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%)*/;
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 6px 6px 12px #ab784c;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #f02c24;
+  box-shadow: 0 0 60px #f02c24;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #f02c24;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
 }
