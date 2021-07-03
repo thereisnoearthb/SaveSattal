@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <meta name="title" content="Save Sattal">
+    <meta name="description" content="Home to over 525 varieties of butterflies and over 500 species of birds including The Red Headed Vulture (Critically Endangered), Cireneous Vulture (Near Threatened), Grey Crowned Prinia (Vulnerable), Pallas’s Fish Eagle (Endangered), as well as other flora and fauna like the King Cobra (Vulnerable), Himalayan Serow (Vulnerable), Foxtail Orchid (Endangered), the world’s largest moth - Atacus Atlas, Sattal is also a refuge to high quality oak-dominated hardwood forests (which are currently endangered in Kumaon region, due to pine invasion, fire and fragmentation), which need to be protected URGENTLY!">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+
+
+
+    <meta property="og:title" content="Save Sattal" />
+    <meta property="og:description" content="One stop for all of #SaveSattal" />
+   <meta property="og:image"  content=SattalLogo.jpg />
+       <meta property="og:image:secure_url"  content=SattalLogo.jpg/>
+       <meta property="og:image:type" content="SattalLogo.jpg" />
+           <meta name="twitter:card" content="summary_large_image" />
+
+    <!--<title>There Is No Earth B: Inclusive Organic Decentralized</title>-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="SattalLogo.jpg"/>
+</head>
+
+<body>
+    
+    <center><img id="userPhoto" src=SattalLogo.jpg alt="SaveSattal logo"></center>
+    <a href="https://twitter.com/search?q=savesattal&src=typed_query&f=live" id="userName">#SaveSattal</a>
+    <div id="links">
+      <center>
+      <a href="https://instagram.com/sattalconservationclub" target="_blank"><img src="https://thereisnoearthb.com/icons/instagram.svg" alt="Instagram icon" width="35" height="35"></a>&nbsp;&nbsp;
+      <a href="https://twitter.com/Sattalconserva1" target="_blank"><img src="https://thereisnoearthb.com/icons/twitter.svg" alt="Twitter icon" width="35" height="35"></a>&nbsp;&nbsp;
+      </center>
+        <div class="wrap">
+        <a href="https://www.change.org/p/cmo-uttarakhand-declare-the-sattal-forests-a-conservation-reserve" target="_blank"><button class="button">Send your Objection!</button></a>
+        </div>
+        <br>
+        <a class="link" href="update.html" target="_blank">Update: 9th June 2021</a>
+        <a class="link" id = "Button1" href="" target="_blank">Loading<br>Awesomeness</a>
+         <a class="link" id = "Button2" href="" target="_blank">...........................</a>
+         <a class="link" id = "Button3" href="" target="_blank">.........................</a>
+         <a class="link" id = "Button4" href="" target="_blank">.......................</a>
+         <a class="link" id = "Button5" href="" target="_blank">.....................</a>
+         <a class="link" id = "Button6" href="" target="_blank">...................</a>
+         <a class="link" id = "Button7" href="" target="_blank">.................</a>
+         <a class="link" id = "Button8" href="" target="_blank">...............</a>
+         <a class="link" id = "Button9" href="" target="_blank">.............</a>
+         <a class="link" id = "Button10" href="" target="_blank">...........</a>
+         <a class="link" id = "Button11" href="" target="_blank">.........</a>
+         <a class="link" id = "Button12" href="" target="_blank">.......</a>
+         <a class="link" id = "Button13" href="" target="_blank">.....</a>
+         <a class="link" id = "Button14" href="" target="_blank">...</a>
+         <a class="link" id = "Button15" href="" target="_blank">.</a>
+         <a class="link" id = "Button16" href="https://thereisnoearthb.com" target="_blank">This open source website has been created by There Is No Earth B for #SaveSattal which controls the content. We do not have any political, religious or monetary affilitations. With anyone.</a>
+
+
+    </div>
+
+    <script>
+        var sheetreq = new XMLHttpRequest();
+        sheetreq.overrideMimeType("application/json");
+        sheetreq.open('GET', "https://spreadsheets.google.com/feeds/cells/1_T7ZYvjIqLI-Iyc9ZOBb8k_XsDJf9yLqM4H1nCpH30s/1/public/full?alt=json", true);
+        sheetreq.onload  = function() {
+           var jsonResponse = JSON.parse(sheetreq.responseText);
+           // do something with jsonResponse
+             var i;
+             for (i = 2; i < 32 ; i+=2)
+                  {
+                    document.getElementById("Button"+(i/2)).innerHTML = jsonResponse.feed.entry[i].content.$t;
+                    document.getElementById("Button"+(i/2)).href = jsonResponse.feed.entry[i+1].content.$t;
+                  }
+
+        };
+        sheetreq.send(null);
+    </script>
+
+</body>
+</html>
