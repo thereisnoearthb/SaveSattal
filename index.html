@@ -59,7 +59,13 @@
          <a class="link" id = "Button13" href="" target="_blank">.....</a>
          <a class="link" id = "Button14" href="" target="_blank">...</a>
          <a class="link" id = "Button15" href="" target="_blank">.</a>
-         <a class="link" id = "Button16" href="https://thereisnoearthb.com" target="_blank">This open source website has been created by There Is No Earth B for #SaveSattal which controls the content. We do not have any political, religious or monetary affilitations. With anyone.</a>
+         <a class="link" id = "Button16" href="" target="_blank">.</a>
+         <a class="link" id = "Button17" href="" target="_blank">.</a>
+         <a class="link" id = "Button18" href="" target="_blank">.</a>
+         <a class="link" id = "Button19" href="" target="_blank">.</a>
+         <a class="link" id = "Button20" href="" target="_blank">.</a>
+
+         <a class="link" href="https://thereisnoearthb.com" target="_blank">This open source website has been created by There Is No Earth B for #SaveSattal which controls the content. We do not have any political, religious or monetary affilitations. With anyone.</a>
 
 <!--
 <a class="link" href="tweets.html" target="_blank"><img src="https://thereisnoearthb.com/icons/undraw_tweetstorm_49e8.svg" alt="Tweetathon graphic" width="65" height="145"><br>Keep tapping to tweet SAVE SATTAL</a>
@@ -320,7 +326,7 @@ https://www.change.org/p/cmo-uttarakhand-declare-the-sattal-forests-a-conservati
                var jsonResponse = JSON.parse(sheetreq.responseText);
                // do something with jsonResponse
                  var i;
-                 for (i = 2; i < 32 ; i+=2)
+                 for (i = 2; i < 42 ; i+=2)
                       {
                         document.getElementById("Button"+(i/2)).innerHTML = jsonResponse.feed.entry[i].content.$t;
                         document.getElementById("Button"+(i/2)).href = jsonResponse.feed.entry[i+1].content.$t;
